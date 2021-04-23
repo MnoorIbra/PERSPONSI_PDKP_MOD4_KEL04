@@ -1,0 +1,38 @@
+#include<iostream>
+#include<string.h>
+
+using namespace std;
+
+void enkripsi()
+{
+    char kata[26];
+    char temp;
+    int i, kel=4;
+
+    cout << "Masukkan kata: " << endl;
+    cin >> kata;
+    for (i = 0; kata[i] != '\0'; ++i) {
+        temp = kata[i];
+        if (temp >= 'a' && temp <= 'z') {
+            temp = temp + kel;
+
+            if (temp > 'z') {
+                temp = temp - 'z' + 'a' - 1;
+            }
+
+            kata[i] = temp;
+        }
+  
+        else if (temp >= 'A' && temp <= 'Z') {
+            temp = temp + kel;
+
+            if (temp > 'Z') {
+                temp = temp - 'Z' + 'A' - 1;
+            }
+
+            kata[i] = temp;
+        }
+    }
+
+    cout << "Menjadi:" << kata << endl;
+}
