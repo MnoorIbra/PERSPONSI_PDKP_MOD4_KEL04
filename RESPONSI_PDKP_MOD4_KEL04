@@ -72,3 +72,37 @@ public:
 
     }
 };
+
+int main() {
+    Myclass myObj;
+    int kode, menu, menu2;
+    cout << "===============================================" << endl;
+    cout << "SELAMAT DATANG DI PROGRAM ENKRIPSI DAN DEKRIPSI" << endl;
+    cout << "" << endl;
+    cout << "Silahkan masukkan kode kelompok: ";
+    cin >> kode;
+    
+
+
+    if (kode == 4) {
+        cout << "Selamat datang kelompok 4 ini adalah program kalian " << endl;
+        while (kode == 4) {
+            cout << "Menu: " << endl; 
+            cout << "1. Enkripsi data " << endl;
+            cout << "2. Dekripsi data " << endl;
+            cout << "Pilih menu: ";
+            cin >> menu;
+            switch (menu) {
+            case 1: enkripsi();
+                break;
+
+            case 2: myObj.dekripsi();
+                break;
+            }
+        }
+    }
+    else {
+        cout << "Sayang sekali ini bukan program kalian :( ";
+    }
+}
+
