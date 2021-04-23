@@ -36,3 +36,39 @@ void enkripsi()
 
     cout << "Menjadi:" << kata << endl;
 }
+
+class Myclass {
+public:
+    void dekripsi()
+    {
+        char kata[26];
+        char temp;
+        int i, kel=4;
+        cout << "Masukkan kata: " << endl;
+        cin >> kata;
+        for (i = 0; kata[i] != '\0'; ++i) {
+            temp = kata[i];
+            if (temp >= 'a' && temp <= 'z') {
+                temp = temp - kel;
+
+                if (temp < 'a') {
+                    temp = temp + 'z' - 'a' + 1;
+                }
+
+                kata[i] = temp;
+            }
+            else if (temp >= 'A' && temp <= 'Z') {
+                temp = temp - kel;
+
+                if (temp < 'A') {
+                    temp = temp + 'Z' - 'A' + 1;
+                }
+
+                kata[i] = temp;
+            }
+        }
+
+        cout << "Menjadi: " << kata << endl;
+
+    }
+};
